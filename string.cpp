@@ -82,11 +82,11 @@ int main()
     cout << a << endl;
     // output : abcdefghijklmnopqrstuvwxyz
 
-    //convert the numeric string to greatest number made my combination of numbers 
-    string x="45379235";
-    sort(x.begin(),x.end(),greater<int>());
-    cout<<x<<endl;
-    //output : 97554332
+    // convert the numeric string to greatest number made my combination of numbers
+    string x = "45379235";
+    sort(x.begin(), x.end(), greater<int>());
+    cout << x << endl;
+    // output : 97554332
 
     return 0;
 }
