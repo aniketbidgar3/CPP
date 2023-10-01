@@ -62,9 +62,6 @@ int main()
     //     array[j + 1] = current;
     // }
 
-
-
-
     for (int i = 0; i < n; i++)
     {
         cout << array[i];

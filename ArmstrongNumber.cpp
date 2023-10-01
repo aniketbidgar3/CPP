@@ -9,24 +9,25 @@ int main()
     cout << "Enter Number : ";
     cin >> n;
 
-    int Number=n;
+    int Number = n;
 
     while (n != 0)
     {
 
         m = n % 10;
-        count =  count+(m*m*m);
+        count = count + (m * m * m);
         n = n / 10;
     }
 
-if(Number==count){
+    if (Number == count)
+    {
 
-    cout << "Number is Armstrong Number ";
-}
-else{
-    cout << "Number is Not Armstrong Number " ;
-
-}
+        cout << "Number is Armstrong Number ";
+    }
+    else
+    {
+        cout << "Number is Not Armstrong Number ";
+    }
 
     return 0;
 }
