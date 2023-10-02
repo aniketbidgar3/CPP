@@ -31,6 +31,6 @@ int main()
         }
     }
 
-cout<<"Maximum Frequency is of Character '"<<ans<<"' and that is "<<maxFreq;
+    cout << "Maximum Frequency is of Character '" << ans << "' and that is " << maxFreq;
     return 0;
 }
