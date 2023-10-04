@@ -68,12 +68,25 @@ void Mergesort(int arr[], int f, int r)
 int main()
 {
 
-    int arr[] = {5, 2, 7, 1, 0};
-    Mergesort(arr, 0, 4);
+    int n;
+    cout<<"Enter Length Of Array : ";
+    cin>>n;
+    int arr[n];
 
-    for (int i = 0; i < 5; i++)
+    cout<<"Enter Elements here : ";
+
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i];
+        cin>>arr[i];
+    }
+    
+
+    Mergesort(arr, 0, n-1);
+
+    cout<<"Sorted Array is : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i]<<" ";
     }
 
     return 0;
