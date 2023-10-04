@@ -69,24 +69,23 @@ int main()
 {
 
     int n;
-    cout<<"Enter Length Of Array : ";
-    cin>>n;
+    cout << "Enter Length Of Array : ";
+    cin >> n;
     int arr[n];
 
-    cout<<"Enter Elements here : ";
+    cout << "Enter Elements here : ";
 
     for (int i = 0; i < n; i++)
     {
-        cin>>arr[i];
+        cin >> arr[i];
     }
-    
 
-    Mergesort(arr, 0, n-1);
+    Mergesort(arr, 0, n - 1);
 
-    cout<<"Sorted Array is : ";
+    cout << "Sorted Array is : ";
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i]<<" ";
+        cout << arr[i] << " ";
     }
 
     return 0;
