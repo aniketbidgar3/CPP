@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void countsort(int arr[], int n , int m)
+void countsort(int arr[], int n, int m)
 {
     int k = arr[0];
     for (int i = 0; i < n; i++)
     {
         k = max(arr[i], k);
     }
-
 
     int count[m] = {0};
 
@@ -37,18 +36,18 @@ void countsort(int arr[], int n , int m)
 
 int main()
 {
-    int n,m;
+    int n, m;
     cout << "Enter No. of Elements : ";
     cin >> n;
     int arr[n];
-    cout<<"Enter Range of Elements : ";
-    cin>>m;
+    cout << "Enter Range of Elements : ";
+    cin >> m;
     cout << "Enter Elements : ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
-    countsort(arr, n,m);
+    countsort(arr, n, m);
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
