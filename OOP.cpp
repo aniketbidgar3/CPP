@@ -64,19 +64,21 @@ int main()
     Student t = s;
     t.Display();
 
-    if(s==t){
-        cout<<"\nobjects 's' and 't' are same ";
+    if (s == t)
+    {
+        cout << "\nobjects 's' and 't' are same ";
     }
-    else{
-        cout<<"\nobjects 's' and 't' are NOT same ";
-        
+    else
+    {
+        cout << "\nobjects 's' and 't' are NOT same ";
     }
-    if(s==r){
-        cout<<"\nobjects 's' and 'r' are same ";
+    if (s == r)
+    {
+        cout << "\nobjects 's' and 'r' are same ";
     }
-    else{
-        cout<<"\nobjects 's' and 'r' are NOT same ";
-        
+    else
+    {
+        cout << "\nobjects 's' and 'r' are NOT same ";
     }
     return 0;
 }
