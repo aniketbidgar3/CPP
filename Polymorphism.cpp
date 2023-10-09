@@ -68,7 +68,7 @@ int main()
     Operator o(12, 3);
     Operator p(23, 7);
     // Operator q = o + p; 
-    q.Display();
+    // q.Display();
 
     return 0;
 }
