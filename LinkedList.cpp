@@ -12,6 +12,7 @@ struct node
         next = NULL;
     }
 };
+
 void insertH(node *&head, int val)
 {
     node *n = new node(val);
@@ -28,7 +29,6 @@ void insertM(node *&head, int val, int d)
     {
         if (temp->data == d)
         {
-
             node *m = temp->next;
             temp->next = n;
             n->next = m;
@@ -43,7 +43,6 @@ void insertM(node *&head, int val, int d)
 
 void insertL(node *&head, int val)
 {
-
     node *n = new node(val);
 
     if (head == NULL)
@@ -60,6 +59,37 @@ void insertL(node *&head, int val)
     temp->next = n;
 }
 
+void deleteH(node *&head)
+{
+    node *deleteNode = head;
+    head = head->next;
+    delete deleteNode;
+}
+
+void deleteM(node *&head, int val)
+{
+    if(head==NULL){
+        return;
+    }
+
+if(head->next==NULL || head->data==val){
+    deleteH(head);
+    
+}
+
+    node *temp = head;
+
+    while (temp->next->data != val)
+    {
+        temp = temp->next;
+    }
+
+    node *deleteNode = temp->next;
+    temp->next = temp->next->next;
+
+    delete deleteNode;
+}
+
 void Display(node *&head)
 {
     cout << "Linked list Is : ";
@@ -71,6 +101,20 @@ void Display(node *&head)
     }
 
     cout << "Null" << endl;
+}
+
+bool Search(node *&head, int val)
+{
+    node *temp = head;
+    while (temp->next != NULL)
+    {
+        if (temp->data == val)
+        {
+            return 1;
+        }
+        temp = temp->next;
+    }
+    return 0;
 }
 
 int main()
@@ -88,7 +132,18 @@ int main()
     insertH(head, -3);
 
     insertM(head, 5, 0);
-    insertM(head, 5, 3); // How to Remove this error
+    // insertM(head, 5, 3);  How to Remove this error
+    
+    Display(head);
+
+    deleteH(head);
+    deleteM(head, 5);
+
+    // deleteM(head, -3); How to Remove this error
+
+    Display(head);
+
+    cout << Search(head, 2);
 
     // do
     // {
@@ -99,8 +154,6 @@ int main()
     //     }
 
     // } while (n != -1);
-
-    Display(head);
 
     return 0;
 }
