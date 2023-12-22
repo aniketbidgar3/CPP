@@ -117,6 +117,41 @@ bool Search(node *&head, int val)
     return 0;
 }
 
+node* Reverse(node* &head ){
+
+    if(head==NULL ||head->next==NULL){
+        return head;
+    }
+
+    node* prevptr=NULL;
+    node* currptr=head;
+    node* nextptr;
+
+    while(currptr!=NULL){
+        nextptr=currptr->next;
+        currptr->next=prevptr;
+
+        prevptr=currptr;
+        currptr=nextptr;
+    }
+
+    return prevptr;
+}
+
+node* ReverseRecursive(node* &head){
+
+     if(head==NULL ||head->next==NULL){
+        return head;
+    }
+
+    node* newhead=ReverseRecursive(head->next);
+    head->next->next=head;
+    head->next=NULL;
+
+    return newhead;
+
+}
+
 int main()
 {
 
@@ -133,7 +168,7 @@ int main()
 
     insertM(head, 5, 0);
     // insertM(head, 5, 3);  How to Remove this error
-    
+
     Display(head);
 
     deleteH(head);
@@ -142,6 +177,12 @@ int main()
     // deleteM(head, -3); How to Remove this error
 
     Display(head);
+
+    node* RevHead =Reverse(head);
+    Display(RevHead);
+
+    RevHead =ReverseRecursive(RevHead);
+    Display(RevHead);
 
     cout << Search(head, 2);
 
