@@ -23,13 +23,9 @@ int main()
                 array[i] = temp;
             }
         }
-       
     }
 
-    cout<<"The Third Largest Number is : "<<array[2];
-
-    
-    
+    cout << "The Third Largest Number is : " << array[2];
 
     return 0;
 }
