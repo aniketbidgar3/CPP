@@ -15,9 +15,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        copy[i]=array[i];
+        copy[i] = array[i];
     }
-    
 
     for (int i = 0; i < 3; i++)
     {
@@ -30,18 +29,17 @@ int main()
                 array[i] = temp;
             }
         }
-       
     }
 
-    cout << "The Third Largest Number is : " << array[2]<<endl;
+    cout << "The Third Largest Number is : " << array[2] << endl;
     for (int i = 0; i < n; i++)
     {
-        if(copy[i]==array[2]){
-            cout<<"Index of "+to_string(array[2])+" is "+to_string(i);
+        if (copy[i] == array[2])
+        {
+            cout << "Index of " + to_string(array[2]) + " is " + to_string(i);
             break;
         }
     }
-    
 
     return 0;
 }
