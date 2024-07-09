@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "iostream": "cpp"
-    }
+        "*.embeddedhtml": "html",
+        "iostream": "cpp",
+        "chrono": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

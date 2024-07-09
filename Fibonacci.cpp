@@ -7,25 +7,22 @@ void fibonacci(int n)
     int t2 = 1;
     int NextTerm;
 
-    cout << "Fibonacci Number Upto number " << n << " are : ";
-
-    while (t1 <= n)
+    cout << "Fibonnaci Series : ";
+    for (int i = 0; i < n; i++)
     {
         cout << t1 << " ";
         NextTerm = t1 + t2;
         t1 = t2;
         t2 = NextTerm;
     }
+    cout << endl;
 }
 
 int main()
 {
+    
+    fibonacci(10);
 
-    int n;
-
-    cout << "Enter Number : ";
-    cin >> n;
-    fibonacci(n);
-
+    
     return 0;
 }

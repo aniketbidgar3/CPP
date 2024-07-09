@@ -17,7 +17,9 @@ int main()
         n = n / 10;
     }
 
-    cout << "Reversed Number is" << count;
+    cout << "Reversed Number is : " << count;
 
     return 0;
 }
+
+
