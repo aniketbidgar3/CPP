@@ -18,7 +18,7 @@ int toDecimal(int n)
 int main()
 {
     int n;
-    cout << "Enter a Binary number : ";
+    cout << "Enter a Octal number : ";
     cin >> n;
     cout << toDecimal(n);
 

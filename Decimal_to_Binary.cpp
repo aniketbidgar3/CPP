@@ -1,24 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int reverse(int n)
+int toBinary(int n)
 {
-    int next, ans = 0;
-    while (n != 0)
+    int p2 = 1;
+    int ans = 0;
+    while (p2 <= n)
     {
-        next = n % 10;
-        ans = ans * 10 + next;
-        n /= 10;
+        p2 *= 2;
+    }
+    p2 /= 2;
+
+    while (n > 0)
+    {
+        int last = n / p2;
+        n -= last * p2;
+        p2 /= 2;
+        ans = ans * 10 + last;
     }
 
     return ans;
-}
-
-int toBinary(int n)
-{
-    int arr[10];
-
-    
 }
 
 int main()
@@ -26,7 +27,7 @@ int main()
     int n;
     cout << "Enter a Binary number : ";
     cin >> n;
-    // cout << toDecimal(n);
-    cout << reverse(n);
+    cout << toBinary(n);
+
     return 0;
 }
