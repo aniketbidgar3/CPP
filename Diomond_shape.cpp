@@ -18,13 +18,21 @@ int main()
 
         for (int l = 0; l < 2 * i + 1; l++)
         {
-            cout << "* ";
+            if (l == 0 || l == 2 * i - 1)
+            {
+
+                cout << "  * ";
+            }
+            else
+            {
+                cout << "  ";
+            }
         }
 
         cout << endl;
     }
 
-    for (int i = n - 1; i >= 0; i--)
+    for (int i = n - 2; i >= 0; i--)
     {
 
         for (int j = 0; j < n - i; j++)
@@ -34,7 +42,15 @@ int main()
 
         for (int l = 0; l < 2 * i + 1; l++)
         {
-            cout << "* ";
+            if (l == 0 || l == 2 * i - 1)
+            {
+
+                cout << "  * ";
+            }
+            else
+            {
+                cout << "  ";
+            }
         }
 
         cout << endl;
