@@ -8,7 +8,7 @@ void dnf(int arr[], int n)
     int mid = 0;
     int high = n - 1;
 
-    while (mid < high)
+    while (mid <= high)
     {
         if (arr[mid] == 0)
         {
