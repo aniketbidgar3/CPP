@@ -31,22 +31,22 @@ int main()
 
     // ******************** Bubble Sort ********************//
 
-    // int count = 0;
+    int count = 0;
 
-    // while (count < n - 1)
-    // {
-    //     for (int i = 0; i < n - count; i++)
-    //     {
+    while (count < n - 1)
+    {
+        for (int i = 0; i < n - count; i++)
+        {
 
-    //         if (array[i + 1] < array[i])
-    //         {
-    //             int temp = array[i + 1];
-    //             array[i + 1] = array[i];
-    //             array[i] = temp;
-    //         }
-    //     }
-    //     count++;
-    // }
+            if (array[i + 1] < array[i])
+            {
+                int temp = array[i + 1];
+                array[i + 1] = array[i];
+                array[i] = temp;
+            }
+        }
+        count++;
+    }
 
     // ******************** Insertion Sort ********************//
 
