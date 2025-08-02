@@ -29,5 +29,9 @@ int main()
         cout << "Number is Not Armstrong Number ";
     }
 
+    cin.ignore();
+
+    cin.get();
+    
     return 0;
 }
