@@ -11,29 +11,47 @@ public:
         data = val;
         next = NULL;
     }
-
-    void print(node *&root)
-    {
-        node *temp = root;
-        while (temp->next != NULL)
-        {
-            cout << temp->data << "->";
-            temp = temp->next;
-        }
-        cout << "NULL";
-    }
-    
 };
+
+void print(node *root)
+{
+    node *temp = root;
+    if (root == NULL)
+    {
+        cout << root->data << "->";
+    }
+    while (temp != NULL)
+    {
+        cout << temp->data << "->";
+        temp = temp->next;
+    }
+    cout << "NULL";
+}
+
+void insert(node *&root, int n)
+{
+    if (root == NULL)
+    {
+        root = new node(n);
+        return;
+    }
+    node *temp = root;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = new node(n);
+}
 
 int main()
 {
 
-    node *root = new node(1);
-    root->next = new node(2);
-    root->next->next = new node(3);
-    root->next->next->next = new node(4);
+    node *root = NULL;
+    insert(root, 23);
+    insert(root, 30);
+    insert(root, 75);
 
-    root->print(root);
+    print(root);
 
     return 0;
 }
