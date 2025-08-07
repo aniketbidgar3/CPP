@@ -15,6 +15,35 @@ struct node
     }
 };
 
+int count(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    return count(root->left) + count(root->right) + 1;
+}
+
+int height(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    int leftHeight = height(root->left);
+    int rightHeight = height(root->right);
+    return max(leftHeight, rightHeight) + 1;
+}
+
+int sumNodes(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    return sumNodes(root->left) + sumNodes(root->right) + root->val;
+}
+
 node *insert(node *root, int val)
 {
     if (root == NULL)
@@ -32,6 +61,31 @@ node *insert(node *root, int val)
     }
     return root;
 }
+
+void search(node *root, int val)
+{
+    if (root == NULL)
+    {
+        cout << "Node " << val << " Not Found" << endl;
+        return;
+    }
+
+    if (root->val == val)
+    {
+        cout << "Node " << val << " Found" << endl;
+        return;
+    }
+
+    else if (val > root->val)
+    {
+        search(root->right, val);
+    }
+    else
+    {
+        search(root->left, val);
+    }
+}
+
 
 void inorder(node *root)
 {
@@ -56,7 +110,7 @@ int main()
     // root->right->left = new node(6);
     // root->right->right = new node(7);
     node *root = NULL;
-    root=insert(root,6);
+    root = insert(root, 6);
 
     insert(root, 3);
     insert(root, 7);
@@ -64,14 +118,14 @@ int main()
     insert(root, 8);
 
     inorder(root);
+    cout << endl;
+
+    search(root, 7);
+    search(root, 9);
+
+    cout << "Number of Nodes : " << count(root) << endl;
+    cout << "Height of Tree  : " << height(root) << endl;
+    cout << "Sum of Nodes    : " << sumNodes(root) << endl;
 
     return 0;
 }
-
-/*
-          1
-         / \
-        2   3
-       /\   /\
-      4  5 6  7
-*/
