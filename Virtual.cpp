@@ -5,10 +5,7 @@ class Parent
 {
 public:
     virtual void hello() = 0;
-    // virtual void show() = 0;
-    // {
-    //     cout << "Hello I am Parent"<<endl;
-    // }
+    virtual void show() = 0;
 };
 
 class Child : public Parent
@@ -16,7 +13,7 @@ class Child : public Parent
 public:
     void hello()
     {
-        cout << "Hello I am Child";
+        cout << "Hello World";
     }
     void show()
     {
@@ -25,10 +22,10 @@ public:
 };
 int main()
 {
-    // Parent p;
-    // p.hello();
+
     Child c;
     c.hello();
+    c.show();
 
     return 0;
 }

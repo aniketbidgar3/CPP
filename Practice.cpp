@@ -46,7 +46,9 @@ void insert(node *&root, int n)
 int main()
 {
 
-    node *root = NULL;
+    node *root =new node(25);
+    (*root).next=new node(29);
+    // root->next=new node(25);
     insert(root, 23);
     insert(root, 30);
     insert(root, 75);
