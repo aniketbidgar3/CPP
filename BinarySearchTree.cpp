@@ -62,6 +62,53 @@ node *insert(node *root, int val)
     return root;
 }
 
+node *getInorderSuccessor(node *root)
+{
+    while (root != NULL && root->left != NULL)
+    {
+        root = root->left;
+    }
+    return root;
+}
+
+node *remove(node *root, int key)
+{
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    if (key < root->val)
+    {
+        root->left = remove(root->left, key);
+    }
+    else if (key > root->val)
+    {
+        root->right = remove(root->right, key);
+    }
+    else
+    {
+        if (root->left == NULL)
+        {
+            node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        else if (root->right == NULL)
+        {
+            node *temp = root->left;
+            delete root;
+            return temp;
+        }
+        else
+        {
+            node *IS = getInorderSuccessor(root->right);
+            root->val = IS->val;
+            root->right = remove(root->right, IS->val);
+        }
+    }
+    return root;
+}
+
 void search(node *root, int val)
 {
     if (root == NULL)
@@ -86,7 +133,6 @@ void search(node *root, int val)
     }
 }
 
-
 void inorder(node *root)
 {
 
@@ -102,13 +148,7 @@ void inorder(node *root)
 
 int main()
 {
-    // node *root = new node(1);
-    // root->left = new node(2);
-    // root->right = new node(3);
-    // root->left->left = new node(4);
-    // root->left->right = new node(5);
-    // root->right->left = new node(6);
-    // root->right->right = new node(7);
+
     node *root = NULL;
     root = insert(root, 6);
 
@@ -116,6 +156,11 @@ int main()
     insert(root, 7);
     insert(root, 2);
     insert(root, 8);
+
+    inorder(root);
+    cout << endl;
+
+    remove(root, 7);
 
     inorder(root);
     cout << endl;
