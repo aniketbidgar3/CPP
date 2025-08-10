@@ -5,19 +5,17 @@ const int size = 10;
 class Stack
 {
 public:
-    int f;
-    int r;
+    int top;
     int arr[size];
 
     Stack()
     {
-        f = 0;
-        r = -1;
+        top = -1;
     }
 
     bool isEmpty()
     {
-        if (r == -1)
+        if (top == -1)
         {
             return 1;
         }
@@ -26,10 +24,10 @@ public:
 
     void push(int n)
     {
-        if (r < size - 1)
+        if (top < size - 1)
         {
-            r++;
-            arr[r] = n;
+            top++;
+            arr[top] = n;
         }
         else
         {
@@ -45,11 +43,11 @@ public:
         }
         else
         {
-            r--;
+            top--;
         }
     }
 
-    int top()
+    int peek()
     {
         if (isEmpty())
         {
@@ -58,7 +56,7 @@ public:
         else
         {
 
-            return arr[r];
+            return arr[top];
         }
     }
 
@@ -70,7 +68,7 @@ public:
         }
         else
         {
-            for (int i = f; i <= r; i++)
+            for (int i = 0; i <= top; i++)
             {
                 cout << arr[i] << " ";
             }
@@ -89,7 +87,7 @@ int main()
     s1.push(93);
     s1.push(24);
     s1.push(63);
-    cout << s1.top() << endl;
+    cout << s1.peek() << endl;
     s1.push(78);
     s1.push(74);
     s1.push(74);
@@ -100,12 +98,12 @@ int main()
     s1.print();
 
     s1.pop();
-    cout << s1.top() << endl;
+    cout << s1.peek() << endl;
     s1.pop();
 
     s1.print();
 
-    cout << s1.top() << endl;
+    cout << s1.peek() << endl;
 
     return 0;
 }
