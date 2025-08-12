@@ -34,6 +34,53 @@ void insert(node *&root, int n)
     nn->next = root;
 }
 
+void remove(node *&root, int n)
+{
+    node *temp = root;
+
+    if (root == NULL)
+    {
+        cout << "List is Empty" << endl;
+        return;
+    }
+
+    if (root->next == root && root->val == n)
+    {
+        delete root;
+        root = NULL;
+        return;
+    }
+
+    if (root->val == n)
+    {
+        node *last = root;
+        while (last->next != root)
+        {
+            last = last->next;
+        }
+
+        node *delNode = root;
+        last->next = root->next;
+        root = root->next;
+        delete delNode;
+        return;
+    }
+
+    do
+    {
+        if (temp->next->val == n)
+        {
+            node *delNode = temp->next;
+            temp->next = delNode->next;
+            delete delNode;
+            return;
+        }
+        temp = temp->next;
+    } while (temp != root);
+
+    cout << "Value Does Not Exist" << endl;
+}
+
 void display(node *&root)
 {
 
@@ -54,6 +101,12 @@ int main()
     insert(root, 12);
     insert(root, 85);
     insert(root, 97);
+    insert(root, 97);
+    insert(root, 97);
+    display(root);
+    // remove(root, 12);
+    remove(root, 85);
+    remove(root, 97);
     display(root);
 
     return 0;
