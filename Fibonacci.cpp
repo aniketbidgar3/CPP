@@ -20,9 +20,8 @@ void fibonacci(int n)
 
 int main()
 {
-    
+
     fibonacci(10);
 
-    
     return 0;
 }

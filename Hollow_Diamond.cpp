@@ -1,37 +1,47 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n;
-    cout<<"Enter n: ";
-    cin>>n;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n-i;j++){
-            cout<<" ";
+    cout << "Enter n: ";
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << " ";
         }
-        for(int j=0;j<i;j++){
-            if(j==0 || j==i-1){
-                cout<<"* ";
+        for (int j = 0; j < i; j++)
+        {
+            if (j == 0 || j == i - 1)
+            {
+                cout << "* ";
             }
-            else{
-            cout<<"  ";
+            else
+            {
+                cout << "  ";
             }
         }
-        cout<<endl;
+        cout << endl;
     }
-    for(int i=n;i>0;i--){
-        for(int j=0;j<n-i;j++){
-            cout<<" ";
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << " ";
         }
-        for(int j=0;j<i;j++){
-            if(j==0 || j==i-1){
-                cout<<"* ";
+        for (int j = 0; j < i; j++)
+        {
+            if (j == 0 || j == i - 1)
+            {
+                cout << "* ";
             }
-            else{
-            cout<<"  ";
+            else
+            {
+                cout << "  ";
             }
         }
-        cout<<endl;
+        cout << endl;
     }
- return 0;
+    return 0;
 }

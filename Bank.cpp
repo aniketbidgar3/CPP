@@ -57,8 +57,9 @@ int main()
 {
     BankAccount b;
 
-    int pin , cpin ;
-    do{
+    int pin, cpin;
+    do
+    {
         cout << "Set Your Pin First\n";
         cout << "Enter Your Pin : ";
         cin >> pin;

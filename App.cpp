@@ -12,7 +12,7 @@ int main()
     cout << "Press Enter to exit...";
     // Discard any leftover newline characters from previous input
     cin.ignore();
-    
+
     // Wait for a character input
     cin.get();
 

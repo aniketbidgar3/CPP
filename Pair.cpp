@@ -5,10 +5,8 @@ int main()
     pair<int, char> p;
     p.first = 3;
     p.second = 'c';
-    
 
-
-    cout << p.first<<" : ";
+    cout << p.first << " : ";
     cout << p.second;
 
     return 0;

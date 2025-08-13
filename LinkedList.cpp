@@ -68,14 +68,15 @@ void deleteH(node *&head)
 
 void deleteM(node *&head, int val)
 {
-    if(head==NULL){
+    if (head == NULL)
+    {
         return;
     }
 
-if(head->next==NULL || head->data==val){
-    deleteH(head);
-    
-}
+    if (head->next == NULL || head->data == val)
+    {
+        deleteH(head);
+    }
 
     node *temp = head;
 
@@ -117,39 +118,43 @@ bool Search(node *&head, int val)
     return 0;
 }
 
-node* Reverse(node* &head ){
+node *Reverse(node *&head)
+{
 
-    if(head==NULL ||head->next==NULL){
+    if (head == NULL || head->next == NULL)
+    {
         return head;
     }
 
-    node* prevptr=NULL;
-    node* currptr=head;
-    node* nextptr;
+    node *prevptr = NULL;
+    node *currptr = head;
+    node *nextptr;
 
-    while(currptr!=NULL){
-        nextptr=currptr->next;
-        currptr->next=prevptr;
+    while (currptr != NULL)
+    {
+        nextptr = currptr->next;
+        currptr->next = prevptr;
 
-        prevptr=currptr;
-        currptr=nextptr;
+        prevptr = currptr;
+        currptr = nextptr;
     }
 
     return prevptr;
 }
 
-node* ReverseRecursive(node* &head){
+node *ReverseRecursive(node *&head)
+{
 
-     if(head==NULL ||head->next==NULL){
+    if (head == NULL || head->next == NULL)
+    {
         return head;
     }
 
-    node* newhead=ReverseRecursive(head->next);
-    head->next->next=head;
-    head->next=NULL;
+    node *newhead = ReverseRecursive(head->next);
+    head->next->next = head;
+    head->next = NULL;
 
     return newhead;
-
 }
 
 int main()
@@ -178,10 +183,10 @@ int main()
 
     Display(head);
 
-    node* RevHead =Reverse(head);
+    node *RevHead = Reverse(head);
     Display(RevHead);
 
-    RevHead =ReverseRecursive(RevHead);
+    RevHead = ReverseRecursive(RevHead);
     Display(RevHead);
 
     cout << Search(head, 2);

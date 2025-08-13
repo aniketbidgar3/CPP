@@ -37,10 +37,10 @@ int main()
     cin >> c >> d;
 
     Complex o(a, b);
-    cout<<"First Complex Number : ";
+    cout << "First Complex Number : ";
     o.Display();
     Complex p(c, d);
-    cout<<"Second Complex Number : ";
+    cout << "Second Complex Number : ";
     p.Display();
     Complex q = o + p;
 

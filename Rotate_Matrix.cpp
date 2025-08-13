@@ -43,9 +43,9 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            cout << ans[i][j]<<" ";
+            cout << ans[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;

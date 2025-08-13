@@ -8,7 +8,6 @@ private:
 public:
     Polymorphism()
     {
-
     }
 
     // Function Overloading
@@ -30,7 +29,6 @@ public:
 
     ~Polymorphism()
     {
-
     }
 };
 
@@ -38,22 +36,22 @@ int main()
 {
     Polymorphism p;
 
-    int a,b,c,n;
-    cout<<"Enter No. of Elements 2 or 3 : ";
-    cin>>n;
-    cout<<"Enter Numbers float or integer : ";
-    if(n==2){
-        cin>>a>>b;
-       cout<<"Sum of Numbers is : ";
-        p.add(a,b);
+    int a, b, c, n;
+    cout << "Enter No. of Elements 2 or 3 : ";
+    cin >> n;
+    cout << "Enter Numbers float or integer : ";
+    if (n == 2)
+    {
+        cin >> a >> b;
+        cout << "Sum of Numbers is : ";
+        p.add(a, b);
     }
-    else{
-        cin>>a>>b>>c;
-        cout<<"Sum of Numbers is : ";
-        p.add(a,b,c);
+    else
+    {
+        cin >> a >> b >> c;
+        cout << "Sum of Numbers is : ";
+        p.add(a, b, c);
     }
-
-
 
     return 0;
 }

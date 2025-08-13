@@ -3,7 +3,7 @@ using namespace std;
 
 bool Palindrome(string p)
 {
-    bool r=true;
+    bool r = true;
     int n = p.length();
 
     for (int i = 0; i < n / 2; i++)
@@ -11,7 +11,7 @@ bool Palindrome(string p)
         cout << p[i] << " and " << p[n - 1 - i] << "\n";
         if (p[i] != p[n - 1 - i])
         {
-            r=false;
+            r = false;
         }
     }
 

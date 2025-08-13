@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void binarySearch(){
-     int n;
+void binarySearch()
+{
+    int n;
     cout << "Enter Size : ";
     cin >> n;
 
@@ -46,7 +47,7 @@ void binarySearch(){
 
 int main()
 {
-   
+
     binarySearch();
     return 0;
 }

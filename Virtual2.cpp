@@ -25,7 +25,7 @@ int main()
     Child c;
     p = &c;
 
-    p->show(); //virtula Used hence Child's Method is called When Virtual is not used Parent Method is called
+    p->show(); // virtula Used hence Child's Method is called When Virtual is not used Parent Method is called
 
     return 0;
 }
