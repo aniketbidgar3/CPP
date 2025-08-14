@@ -71,7 +71,7 @@ int main()
     {
         int u, v;
         cin >> u >> v;
-        g.addEdge(u, v, 1);
+        g.addEdge(u, v);
     }
 
     g.print();
