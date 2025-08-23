@@ -59,37 +59,37 @@ void insertL(node *&head, int val)
     temp->next = n;
 }
 
-void deleteH(node *&head)
-{
-    node *deleteNode = head;
-    head = head->next;
-    delete deleteNode;
-}
+// void deleteH(node *&head)
+// {
+//     node *deleteNode = head;
+//     head = head->next;
+//     delete deleteNode;
+// }
 
-void deleteM(node *&head, int val)
-{
-    if (head == NULL)
-    {
-        return;
-    }
+// void deleteM(node *&head, int val)
+// {
+//     if (head == NULL)
+//     {
+//         return;
+//     }
 
-    if (head->next == NULL || head->data == val)
-    {
-        deleteH(head);
-    }
+//     if (head->next == NULL || head->data == val)
+//     {
+//         deleteH(head);
+//     }
 
-    node *temp = head;
+//     node *temp = head;
 
-    while (temp->next->data != val)
-    {
-        temp = temp->next;
-    }
+//     while (temp->next->data != val)
+//     {
+//         temp = temp->next;
+//     }
 
-    node *deleteNode = temp->next;
-    temp->next = temp->next->next;
+//     node *deleteNode = temp->next;
+//     temp->next = temp->next->next;
 
-    delete deleteNode;
-}
+//     delete deleteNode;
+// }
 
 void Display(node *&head)
 {
