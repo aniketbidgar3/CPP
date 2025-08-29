@@ -10,11 +10,16 @@ int main()
     file << "I am 22 Years Old\n";
     file << "I am Computer Science Graduate\n";
     file << "I am Currently Working at Disha Computers\n";
+    file << "I am Currently Working at Disha Computers\n";
 
     file.close();
 
     ifstream read_file("Information.txt");
     string str;
+
+    // getline(read_file, str);
+    // cout << str << endl;
+
     while (getline(read_file, str))
     {
         cout << str << endl;

@@ -101,21 +101,21 @@ int main()
         int u, v;
         cout << "Enter Edge " << i + 1 << " : ";
         cin >> u >> v;
-        g.addEdge(u, v);
+        g.addEdge(u, v,1);
     }
 
     g.print();
 
-    int start;
-    cout << "Enter start node for BFS and DFS : ";
-    cin >> start;
-
-    g.BFS(start);
-
-    // cout << "Enter start node for DFS: ";
+    // int start;
+    // cout << "Enter start node for BFS and DFS : ";
     // cin >> start;
 
-    g.DFS(start);
+    // g.BFS(start);
+
+    // // cout << "Enter start node for DFS: ";
+    // // cin >> start;
+
+    // g.DFS(start);
 
     return 0;
 }
