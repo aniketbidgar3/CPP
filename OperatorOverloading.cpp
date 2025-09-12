@@ -13,7 +13,7 @@ public:
         img = i;
     }
 
-    Complex operator+(Complex &obj)
+    Complex operator +(Complex &obj)
     {
         Complex res;
         res.real = real + obj.real;

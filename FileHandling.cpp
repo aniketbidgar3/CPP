@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    ofstream file("Information.txt");
+    ofstream file("File.txt");
 
     file << "Hello I am Aniket Bidgar\n";
     file << "I am 22 Years Old\n";
@@ -14,9 +14,13 @@ int main()
 
     file.close();
 
-    ifstream read_file("Information.txt");
+    ifstream read_file("File.txt");
     string str;
 
+    getline(read_file, str);
+    cout << str << endl;
+    // getline(read_file, str);
+    // cout << str << endl;
     // getline(read_file, str);
     // cout << str << endl;
 

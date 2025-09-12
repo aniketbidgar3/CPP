@@ -10,6 +10,8 @@ public:
     void practice(){
         cout<<"Welcome \n";
     }
+
+
 };
 
 class Child : public Parent
@@ -23,6 +25,8 @@ public:
     {
         cout << "Hello I am Child\n";
     }
+
+    
 };
 int main()
 {
